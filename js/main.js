@@ -310,10 +310,12 @@ function initForms() {
       new FormData(form).forEach((val, key) => {
         if (String(val).trim()) lines.push(`${key}: ${val}`);
       });
-      window.open(waLink(lines.join("\n")), "_blank", "noopener");
+      const url = waLink(lines.join("\n"));
+      window.open(url, "_blank", "noopener");
       const note = form.querySelector(".form-note");
       if (note) {
-        note.textContent = "Thank you! WhatsApp has opened with your details — just press send.";
+        note.innerHTML = `Thank you! Your details are ready in WhatsApp — just press send.<br>
+          <a class="btn btn-navy" style="margin-top:12px" href="${url}" target="_blank" rel="noopener">Open WhatsApp ${svgIcon("arrow", 16)}</a>`;
         note.classList.add("success");
       }
       form.reset();
