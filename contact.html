@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Om Trans India</title>
+  <meta name="description" content="Contact Om Trans India, Medchal, Hyderabad. Call +91 93910 05001 or email omtransindiahyd@gmail.com to book a truck.">
+  <meta name="theme-color" content="#022a64">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>Book a truck, ask for a quote, or just say hello. We usually reply within minutes.</p>
+        <div class="crumbs"><a href="index.html">Home</a> / <span>Contact</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="info-stack">
+          <div class="reveal" style="margin-bottom:8px">
+            <span class="eyebrow">Get in Touch</span>
+            <h2 style="font-size:clamp(26px,3.4vw,36px)">We're here to <span class="highlight">help</span></h2>
+            <p>Share your pickup and drop location and we'll arrange the right vehicle.</p>
+          </div>
+          <div class="info-card reveal"><div class="icon"><i data-icon="phone"></i></div><div><h4>Call Us</h4><p data-site="phones"></p></div></div>
+          <div class="info-card reveal d1"><div class="icon"><i data-icon="mail"></i></div><div><h4>Email</h4><p data-site="email"></p></div></div>
+          <div class="info-card reveal d2"><div class="icon"><i data-icon="pin"></i></div><div><h4>Office Address</h4><p data-site="address"></p></div></div>
+          <div class="info-card reveal d3"><div class="icon"><i data-icon="clock"></i></div><div><h4>Working Hours</h4><p data-site="hours"></p></div></div>
+        </div>
+
+        <div class="form-card reveal d1" id="quote">
+          <h3>Book a Truck / Get a Quote</h3>
+          <p>Fill the form and press send — your details open in WhatsApp, ready to send to us.</p>
+          <form data-wa="New truck enquiry from website" novalidate>
+            <div class="form-grid">
+              <div class="field"><label for="f-name">Your Name *</label><input id="f-name" name="Name" required placeholder="Full name"></div>
+              <div class="field"><label for="f-phone">Phone *</label><input id="f-phone" name="Phone" type="tel" required pattern="[0-9+ ]{10,15}" placeholder="10-digit mobile"></div>
+              <div class="field full"><label for="f-company">Company</label><input id="f-company" name="Company" placeholder="Company name (optional)"></div>
+              <div class="field"><label for="f-from">Pickup Location *</label><input id="f-from" name="Pickup" required placeholder="City / area"></div>
+              <div class="field"><label for="f-to">Drop Location *</label><input id="f-to" name="Drop" required placeholder="City / area"></div>
+              <div class="field"><label for="f-vehicle">Vehicle Type</label>
+                <select id="f-vehicle" name="Vehicle">
+                  <option value="">Not sure — suggest one</option>
+                  <option>14 ft Truck</option>
+                  <option>17 ft Truck</option>
+                  <option>20 ft Truck</option>
+                  <option>22 ft Truck</option>
+                  <option>32 ft SXL Container</option>
+                  <option>32 ft MXL Container</option>
+                </select>
+              </div>
+              <div class="field"><label for="f-date">Pickup Date</label><input id="f-date" name="Date" type="date"></div>
+              <div class="field full"><label for="f-msg">Load Details</label><textarea id="f-msg" name="Details" placeholder="Type of goods, weight, any special needs"></textarea></div>
+              <div class="full"><button type="submit" class="btn btn-primary btn-block">Send on WhatsApp <i data-icon="arrow" data-size="18"></i></button></div>
+            </div>
+            <p class="form-note">Prefer email? Write to us at <a href="mailto:omtransindiahyd@gmail.com" class="highlight">omtransindiahyd@gmail.com</a></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="map-wrap reveal">
+          <iframe data-map title="Om Trans India location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
