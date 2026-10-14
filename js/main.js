@@ -168,12 +168,11 @@ function truckSVG({ length = 20, axles = 1, label = true, cls = "" } = {}) {
   const W = 70 + length * 7;           // cargo box width
   const x0 = 10 + W + 4;               // cab start
   const total = x0 + 70;
-  const rear = [];
-  const firstRear = 10 + Math.min(40, W * 0.2);
-  if (axles >= 3) rear.push(10 + W - 70, 10 + W - 42, 10 + W - 14);
-  else rear.push(firstRear, 10 + W - 30);
+  // Rear axles sit under the back of the cargo box: 1 axle for normal trucks, a tandem pair for multi-axle
+  const rearAxle = 10 + Math.max(34, W * 0.2);
+  const rear = axles >= 3 ? [rearAxle - 15, rearAxle + 15] : [rearAxle];
   const wheel = cx => `<g class="wheel"><circle cx="${cx}" cy="96" r="14" fill="#1b2433"/><circle cx="${cx}" cy="96" r="8" fill="#cbd5e1"/><circle cx="${cx}" cy="96" r="5.5" fill="none" stroke="#64748b" stroke-width="2" stroke-dasharray="3 2.8"/><circle cx="${cx}" cy="96" r="2" fill="#475569"/></g>`;
-  const fs = Math.min(22, W / 9);
+  const fs = Math.min(22, W / 10.5);
   return `<svg class="${cls}" viewBox="0 0 ${total} 118" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${length} ft truck">
     <ellipse cx="${total / 2}" cy="112" rx="${total / 2 - 6}" ry="4" fill="rgba(0,0,0,.18)"/>
     <g class="truck-body">
